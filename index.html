@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .form {
+            margin: 20px;
+        }
+    
+        .form-group {
+            margin: 10px;
+        }
+    
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+    
+        select {
+            width: 200px;
+        }
+    
+        button {
+            width: 100px;
+            height: 40px;
+        }
+    
+        #result {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de precios de ordenadores de segunda mano</h1>
+    <div class="container">
+        <form class="form" id="form">
+            <div class="form-group">
+                <label for="procesador">Procesador:</label>
+                <select id="procesador" name="procesador">
+                    <option value="150">I3</option>
+                    <option value="200">i5</option>
+                    <option value="300">i7</option>
+                    <option value="400">I9</option>
+                    <option value="120">pentium</option>
+                    <option value="75">celeron</option>
+                    <option value="150">Ryzen 3</option>
+                    <option value="200">Ryzen 5</option>
+                    <option value="300">Ryzen 7</option>
+                    <option value="400">Ryzen 9</option>
+                    <option value="90">amd a10</option>
+                    <option value="70">amd a8</option>
+                    <option value="50">amd a6</option>
+                    <option value="30">amd a4</option>
+                    <option value="20">atom</option>
+                    <option value="100">ATHLON</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="disco1">Disco 1:</label>
+                <select id="disco1" name="disco1">
+                    <option value="-50"> 100 GB HDD</option>
+                    <option value="-20"> 100 GB SSD</option>
+                    <option value="0">100-200 GB HDD</option>
+                    <option value="10">100-200 GB SSD</option>
+                    <option value="5">200-450 GB HDD</option>
+                    <option value="20">200-450 GB SSD</option>
+                    <option value="10">450-900 GB HDD</option>
+                    <option value="40">450-900 GB SSD</option>
+                    <option value="15">900 GB - 2 TB HDD</option>
+                    <option value="70">900 GB - 2 TB SSD</option>
+                    <option value="30">2 TB &lt; HDD </option>
+                    <option value="100">2 TB &lt; SSD </option>
+                        </select>
+                        </div>
+    
+            <div class="form-group">
+                <label for="disco2">Disco 2:</label>
+                <select id="disco2" name="disco2">
+                <option value="0">100 GB HDD </option>
+                <option value="0">100 GB SSD </option>
+                    <option value="0">100-200 GB HDD </option>
+                    <option value="5">100-200 GB SSD </option>
+                    <option value="5">200-450 GB HDD </option>
+                    <option value="10">200-450 GB SSD </option>
+                    <option value="10">450-999 GB HDD </option>
+                    <option value="20">450-999 GB SSD </option>
+                    <option value="15">1 - 2 TB HDD </option>
+                    <option value="30">1 - 2 TB SSD </option>
+                    <option value="20">2 TB &lt; HDD </option>
+                    <option value="40">2 TB &lt; SSD </option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="generacion">Generación:</ label>
+                <select id="generacion" name="generacion">
+                <option value="-50">intel gen, 1, 2, 3, 4, 5 </option>
+                <option value="0">intel gen 6, 7, 8, 9 </option>
+                <option value="50">intel gen 10, 11 </option>
+                <option value="100">intel gen 12, 13 </option>
+                <option value="-75">ryzen gen 1, 2 </option>
+                <option value="0">ryzen gen 3, 4 </option>
+                <option value="50">ryzen gen 5, 6, 7 </option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="ram">Memoria RAM:</ label>
+                <select id="ram" name="ram">
+                    <option value="0">4 GB </option>
+                    <option value="5">6 GB </option>
+                    <option value="15">8 GB </option>
+                    <option value="30">16 GB </option>
+                    <option value="60">32 GB </option>
+                    <option value="80">64 GB </option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="grafica">T.Grafica:</label>
+                <select id="grafica" name="grafica">
+                        <option value="-20"> compartida </option>
+                        <option value="-10">menos de 2g </option>
+                        <option value="0">3gb </option>
+                        <option value="100">4gb </option>
+                        <option value="250">6gb </option>
+                        <option value="350">8gb </option>
+                        <option value="500">12gb </option>
+                        <option value="600">16gb </option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <button id="calculate" type="button">Calcular precio</button>
+            </div>
+            <div id="result"></div>
+        </form>
+        </div>
+    <script>
+
+        // Get the form element and the input elements
+
+        var form =
+            document.getElementById("form");
+
+        var procesador =
+            document.getElementById("procesador");
+
+        var disco1 =
+            document.getElementById("disco1");
+
+        var disco2 =
+            document.getElementById("disco2");
+
+        var generacion =
+            document.getElementById("generacion");
+
+        var ram =
+            document.getElementById("ram");
+
+        var grafica =
+            document.getElementById("grafica");
+
+        var calculate =
+            document.getElementById("calculate");
+
+        var result =
+            document.getElementById("result");
+
+        // Define a function that calculates the total price
+
+        function calculatePrice() {
+
+            // Get the values of the selected options
+
+            var procesadorValue =
+                Number(procesador.value);
+
+            var disco1Value =
+                Number(disco1.value);
+
+            var disco2Value =
+                Number(disco2.value);
+
+            var generacionValue =
+                Number(generacion.value);
+
+            var ramValue =
+                Number(ram.value);
+
+            var graficaValue =
+                Number(grafica.value);
+
+            // Add up the values to get the total price
+
+            var totalPrice =
+                procesadorValue + disco1Value + disco2Value + generacionValue + ramValue + graficaValue;
+
+            // Display the total price in the result element
+
+            result.innerHTML =
+                "Precio total: €" + totalPrice;
+
+        }
+
+        // Add an event listener to the calculate button
+
+        calculate.addEventListener("click", calculatePrice);
+    </script>
+</body>
+</html>
