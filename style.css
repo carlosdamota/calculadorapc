@@ -73,6 +73,7 @@ option{
 }
 .pc-precio {
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding: 1rem;
     font-weight: bold;
@@ -82,6 +83,7 @@ option{
 .pc-precio__title {
     color: #E20077;
     margin: 0;
+    font-size: 1.5rem;
 }
 .pc-precio__text {
     margin-bottom: 0
