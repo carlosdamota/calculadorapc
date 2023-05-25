@@ -64,25 +64,40 @@
             <div class="form-group">
                 <label for="procesador">Procesador:</label>
                 <select class="form-group__select" id="procesador" name="procesador">
-                    <option value="150">I3</option>
-                    <option value="200">i5</option>
-                    <option value="300">i7</option>
-                    <option value="400">I9</option>
-                    <option value="120">pentium</option>
-                    <option value="75">celeron</option>
+                    <option value="150">Core I3</option>
+                    <option value="200">Core I5</option>
+                    <option value="300">Core I7</option>
+                    <option value="400">Core I9</option>
+                    <option value="120">Pentium</option>
+                    <option value="75">Celeron</option>
                     <option value="150">Ryzen 3</option>
                     <option value="200">Ryzen 5</option>
                     <option value="300">Ryzen 7</option>
                     <option value="400">Ryzen 9</option>
-                    <option value="90">amd a10</option>
-                    <option value="70">amd a8</option>
-                    <option value="50">amd a6</option>
-                    <option value="30">amd a4</option>
-                    <option value="20">atom</option>
+                    <option value="90">Amd A10</option>
+                    <option value="70">Amd A8</option>
+                    <option value="50">Amd A6</option>
+                    <option value="30">Amd A4</option>
+                    <option value="20">Atom</option>
                     <option value="100">ATHLON</option>
+                    <option value="100">Amd FX</option>
                 </select>
             </div>
-    
+            <div class="form-group">
+                <label for="generacion">Generación:</label>
+                <select class="form-group__select" id="generacion" name="generacion">
+                    <option value="1">Otras Generaciones</option>
+                    <option value="0.5">Intel core I gen 1, 2</option>
+                    <option value="0.7">Intel core I gen 3, 4, 5 </option>
+                    <option value="0.9">Intel core I gen 6,7 </option>
+                    <option value="1">Intel core I gen 8, 9 </option>
+                    <option value="1.1">Intel core I gen 10, 11 </option>
+                    <option value="1.3">Intel core I gen 12, 13 </option>
+                    <option value="0.5">Ryzen gen 1, 2 </option>
+                    <option value="1">Ryzen gen 3, 4 </option>
+                    <option value="1.2">Ryzen gen 5, 6, 7 </option>
+                </select>
+            </div>
             <div class="form-group">
                 <label for="disco1">Disco 1:</label>
                 <select class="form-group__select" id="disco1" name="disco1">
@@ -119,21 +134,6 @@
                     <option value="40">2 TB &lt; SSD </option>
                 </select>
             </div>
-    
-            <div class="form-group">
-                <label for="generacion">Generación:</label>
-                <select class="form-group__select" id="generacion" name="generacion">
-                <option value="1">Otros procesadores</option>
-                <option value="0.7">Intel I gen, 1, 2, 3, 4, 5 </option>option>
-                <option value="1">Intel I gen 6, 7, 8, 9 </option>
-                <option value="1.1">Intel I gen 10, 11 </option>
-                <option value="1.3">Intel I gen 12, 13 </option>
-                <option value="0.5">Ryzen gen 1, 2 </option>
-                <option value="1">Ryzen gen 3, 4 </option>
-                <option value="1.2">Ryzen gen 5, 6, 7 </option>
-                </select>
-            </div>
-    
             <div class="form-group">
                 <label for="ram">M.RAM:</label>
                 <select class="form-group__select" id="ram" name="ram">
@@ -177,12 +177,16 @@
             </div>
         </form>
     </main>
+    <footer class="footer">
+        <P>Creado por <a href="https://www.linkedin.com/in/carlos-damota/" target="_blank">Carlos Damota</a> © 2023</P>
+        <P>V1.2</P>
+    </footer>
     <script>
 
         // Get the form element and the input elements
 
-        var form =
-            document.getElementById("form");
+        // var form =
+        //     document.getElementById("form");
         var aio = 
             document.getElementById("aio");
         var procesador =
