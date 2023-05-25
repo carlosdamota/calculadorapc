@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'vagRounded';
+    src: url('/fonts/VAG\ Rounded\ Std\ Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vagRounded';
+    src: url('/fonts/VAG\ Rounded\ Std\ Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: vagRounded;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
