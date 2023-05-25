@@ -158,12 +158,23 @@
                         <option value="600">16gb </option>
                     </select>
             </div>
-            <div class="form-group">
-                <button id="calculate" type="button">Calcular precio</button>
+            <div class="form-button">
+                <button class="button" id="calculate" type="button">Calcular precio</button>
             </div>
-            <div id="resultC"></div>
-            <div id="resultB"></div>
-            <div id="resultA"></div>
+            <div class="pc-precios">
+                <div class="pc-precio" >
+                    <h3 class="pc-precio__title">Antiguo</h3>
+                    <p class="pc-precio__text" id="resultC"></p>
+                </div>
+                <div class="pc-precio">
+                    <h3 class="pc-precio__title" >Normal</h3>
+                    <p class="pc-precio__text" id="resultB"></p>
+                </div>
+                <div class="pc-precio">
+                    <h3 class="pc-precio__title">Gaming</h3>
+                    <p class="pc-precio__text" id="resultA"></p>
+                </div>
+            </div>
         </form>
     </main>
     <script>
@@ -245,13 +256,13 @@
             // Display the total price in the result element
 
             resultC.innerHTML =
-                "PC Viejo: €" + less20Percent.toFixed(2); 
+                "€" + less20Percent.toFixed(2); 
 
             resultB.innerHTML =
-                "PC Normal: €" + totalPrice;
+                "€" + totalPrice;
             
             resultA.innerHTML = 
-                "PC Gaming: €" + more10Percent.toFixed(2);
+                "€" + more10Percent.toFixed(2);
 
         }
 

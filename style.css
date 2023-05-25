@@ -16,6 +16,53 @@
     font-family: vagRounded;
 }
 .form {
+    width: 500px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+.form-group {
+    display: flex;
+    border-radius: 1rem;
+    gap: 2rem;
+    background-color: #E20077;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form-button {
+    margin-top: 1rem;
+}
+.button{
+    border-radius: 1rem;
+    background-color: #E20077;
+    border: none;
+    color: white;
+}
+.pc-precios {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem;
+}
+.pc-precio {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: #E20077 solid 1px;
+}
+.pc-precio__title {
+    color: #E20077;
+    margin: 0;
+}
+.pc-precio__text {
+    margin-bottom: 0
+    ;
+}
+
+
+
