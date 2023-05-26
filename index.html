@@ -87,7 +87,7 @@
                 <label for="generacion">Generación:</label>
                 <select class="form-group__select" id="generacion" name="generacion">
                     <option value="1">Otras Generaciones</option>
-                    <option value="0.5">Intel core I gen 1, 2</option>
+                    <option value="0.2">Intel core I gen 1, 2</option>
                     <option value="0.7">Intel core I gen 3, 4, 5 </option>
                     <option value="0.9">Intel core I gen 6,7 </option>
                     <option value="1">Intel core I gen 8, 9 </option>
@@ -148,15 +148,15 @@
             <div class="form-group">
                 <label for="grafica">T.Grafica:</label>
                 <select class="form-group__select" id="grafica" name="grafica">
-                        <option value="-20"> Compartida </option>
-                        <option value="-10"> Menos de 2g </option>
-                        <option value="0">3gb </option>
-                        <option value="100">4gb </option>
-                        <option value="250">6gb </option>
-                        <option value="350">8gb </option>
-                        <option value="500">12gb </option>
-                        <option value="600">16gb </option>
-                    </select>
+                    <option value="0"> Compartida </option>
+                    <option value="20"> Menos de 2g </option>
+                    <option value="30">3gb </option>
+                    <option value="100">4gb </option>
+                    <option value="200">6gb </option>
+                    <option value="300">8gb </option>
+                    <option value="400">12gb </option>
+                    <option value="500">16gb </option>
+                </select>
             </div>
             <div class="form-button">
                 <button class="button" id="calculate" type="button">Calcular precio de venta</button>
@@ -179,7 +179,7 @@
     </main>
     <footer class="footer">
         <P>Creado por <a href="https://www.linkedin.com/in/carlos-damota/" target="_blank">Carlos Damota</a> © 2023</P>
-        <P>V1.2</P>
+        <P>V1.3</P>
     </footer>
     <script>
 
@@ -247,11 +247,11 @@
 
             // Add up the values to get the total price
 
-            var procesadorPrecio =
-                procesadorValue*generacionValue;
+            var totalPartial =
+                aioValue + procesadorValue + disco1Value + disco2Value + ramValue + graficaValue;
 
             var totalPrice =
-                aioValue + procesadorPrecio + disco1Value + disco2Value + ramValue + graficaValue;
+                totalPartial * generacionValue;
             
             var less20Percent = totalPrice * 0.8;
             
