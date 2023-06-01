@@ -24,6 +24,14 @@ header {
     padding: 1rem 0;
     border-bottom: #E20077 solid 1px;
 }
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+}
 
 .form {
     margin-top: 3rem;
@@ -98,16 +106,34 @@ option{
     margin-bottom: 0
     ;
 }
+.consejos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.consejos__article {
+    border: #E20077 2px solid;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 33%;
+    height: 12rem;
+}
+.consejos__title {
+    color: #E20077;
+    font-weight: 600;
+}
 .footer {
     width: 100vw;
     display: flex;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed; */
+    bottom: 0px;
     align-items: center;
     justify-content: space-evenly;
     padding: 1rem 0;
     color: white;
     background-color: #E20077;
+    margin-top: auto;
    
 }
 
