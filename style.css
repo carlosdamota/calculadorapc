@@ -85,16 +85,16 @@ option{
 .pc-precios {
     display: flex;
     gap: 1rem;
-    margin: 2rem;
+    margin: 2rem 4rem;
 }
 .pc-precio {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    border: #E20077 solid 1px;
+    width: 33%;
+    border-radius: 1rem;
+    border: #E20077 solid 2px;
 }
 .pc-precio__title {
     color: #E20077;
@@ -103,8 +103,9 @@ option{
     padding-bottom: 1rem;
 }
 .pc-precio__text {
-    margin-bottom: 0
-    ;
+    margin-bottom: 0;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .infografica {
@@ -116,19 +117,35 @@ option{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
+    margin: 2rem;
+    width: 100%;
 }
+
 .consejos__article {
-    border: #E20077 2px solid;
+    border: #E20077 1px solid;
     border-radius: 1rem;
-    padding: 2rem;
-    width: 33%;
+    padding: 1rem 2rem;
     height: 12rem;
+    width: 45%;
 }
+
+.consejos__article p {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+
 .consejos__title {
     color: #E20077;
     font-weight: 600;
+    margin: 0.5rem;
 }
+.consejos__subtitle {
+    color: #E20077;
+    font-weight: 600;
+}
+
 .footer {
     width: 100vw;
     display: flex;
@@ -141,6 +158,17 @@ option{
     background-color: #E20077;
     margin-top: auto;
    
+}
+@media (max-width: 768px) {
+    .consejos {
+        flex-direction: column;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+
+    .consejos__article {
+        width: 100%;
+    }
 }
 
 
