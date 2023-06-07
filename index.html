@@ -68,7 +68,7 @@
                     <option value="200">Core I5</option>
                     <option value="300">Core I7</option>
                     <option value="400">Core I9</option>
-                    <option value="120">Pentium</option>
+                    <option value="100">Pentium</option>
                     <option value="75">Celeron</option>
                     <option value="150">Ryzen 3</option>
                     <option value="200">Ryzen 5</option>
@@ -172,31 +172,32 @@
                     <option value="400">AMD 16Gb </option>
                     <option value="600"> AMD 24Gb &lt; </option>
                     <option value="50">Nvidea 1Gb</option>
-                    <option value="100">Nvidea 2Gb</option>
-                    <option value="150">Nvidea 3Gb</option>
-                    <option value="180">Nvidea 4Gb</option>
-                    <option value="200">Nvidea 6Gb</option>
-                    <option value="280">Nvidea 8Gb</option>
-                    <option value="400">Nvidea 11Gb</option>
-                    <option value="500">Nvidea 12Gb</option>
-                    <option value="550">Nvidea 16Gb</option>
-                    <option value="600">Nvidea 20Gb &lt;</option>
+                    <option value="100">Nvidia 2Gb</option>
+                    <option value="150">Nvidia 3Gb</option>
+                    <option value="180">Nvidia 4Gb</option>
+                    <option value="200">Nvidia 6Gb</option>
+                    <option value="280">Nvidia 8Gb</option>
+                    <option value="400">Nvidia 11Gb</option>
+                    <option value="500">Nvidia 12Gb</option>
+                    <option value="550">Nvidia 16Gb</option>
+                    <option value="600">Nvidia 20Gb &lt;</option>
                 </select>
             </div>
+            <p class="infografica">En igualdad de memoria, las gráficas AMD son un poco más baratas.</p>
             <div class="form-button">
                 <button class="button" id="calculate" type="button">Calcular precio de venta</button>
             </div>
             <div class="pc-precios">
                 <div class="pc-precio" >
-                    <h3 class="pc-precio__title">Antiguo</h3>
+                    <h3 class="pc-precio__title">Normal</h3>
                     <p class="pc-precio__text" id="resultC"></p>
                 </div>
                 <div class="pc-precio">
-                    <h3 class="pc-precio__title" >Normal</h3>
+                    <h3 class="pc-precio__title" >Gaming</h3>
                     <p class="pc-precio__text" id="resultB"></p>
                 </div>
                 <div class="pc-precio">
-                    <h3 class="pc-precio__title">Gaming</h3>
+                    <h3 class="pc-precio__title">Especial</h3>
                     <p class="pc-precio__text" id="resultA"></p>
                 </div>
             </div>
@@ -218,7 +219,7 @@
     </main>
     <footer class="footer">
         <P>Creado por <a href="https://www.linkedin.com/in/carlos-damota/" target="_blank">Carlos Damota</a> © 2023</P>
-        <P>V1.5</P>
+        <P>V1.6</P>
     </footer>
     <script>
 
@@ -292,20 +293,22 @@
             var totalPrice =
                 totalPartial * generacionValue;
             
-            var less20Percent = totalPrice * 0.8;
+            var resultNormal = totalPrice * 0.9;
             
-            var more10Percent = totalPrice * 1.1;
+            var resultGaming = totalPrice * 1.1;
+            
+            var resultEspecial = totalPrice * 1.3;
 
             // Display the total price in the result element
 
             resultC.innerHTML =
-                "€" + less20Percent.toFixed(2); 
+                "€" + resultNormal.toFixed(2); 
 
             resultB.innerHTML =
-                "€" + totalPrice;
+                "€" + resultGaming.toFixed(2);
             
             resultA.innerHTML = 
-                "€" + more10Percent.toFixed(2);
+                "€" + resultEspecial.toFixed(2);
 
         }
 
