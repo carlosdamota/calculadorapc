@@ -21,8 +21,9 @@
     color: inherit;
 }
 header {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     border-bottom: #E20077 solid 1px;
+    border-radius: 10rem;
     color: white;
     background-color: #E20077;
 }
@@ -32,9 +33,11 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(/image/ReciclajepcCashConverters.jpg);
-    background-size: 100vw;
+    background-size: cover;
+
     background-repeat: no-repeat;
-    background-position: center;
+    background-position-y: center;
+    background-position-x: center;
 
 }
 
@@ -52,7 +55,7 @@ header {
     border-radius: 1rem;
     gap: 1;
     background-color: transparent;
-    border: #E20077 1px solid;
+    border: #E20077 2px solid;
     padding: 0.5rem 0.5rem;
     margin: 0.5rem;
     font-size: 1rem;
