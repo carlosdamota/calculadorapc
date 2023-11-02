@@ -32,7 +32,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(/image/ReciclajepcCashConverters.jpg);
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(/image/ReciclajepcCashConverters.jpg);
     background-size: cover;
 
     background-repeat: no-repeat;
