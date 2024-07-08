@@ -120,15 +120,15 @@
             <div class="form-group">
                 <label for="disco1">Disco SSD:</label>
                 <select class="form-group__select" id="disco1" name="disco1">
-                    <option value="0"> Sin SSD</option>
-                    <option value="5"> 0-120 GB</option>
-                    <option value="10">121-240 GB</option>
-                    <option value="20">256-480 GB</option>
-                    <option value="30">512-980 GB</option>
-                    <option value="40">1 - 2 TB</option>
-                    <option value="60">2 - 4 TB</option>
-                    <option value="100">4 - 8 TB</option>
-                    <option value="150">8 TB &lt; </option>
+                    <option value="-10">Sin SSD</option>
+                    <option value="0"> 0-120 GB</option>
+                    <option value="5">121-240 GB</option>
+                    <option value="10">256-480 GB</option>
+                    <option value="20">512-980 GB</option>
+                    <option value="35">1 - 2 TB</option>
+                    <option value="50">2 - 4 TB</option>
+                    <option value="75">4 - 8 TB</option>
+                    <option value="100">8 TB &lt; </option>
                         </select>
                         </div>
     
@@ -136,13 +136,13 @@
                 <label for="disco2">Disco HDD:</label>
                 <select class="form-group__select" id="disco2" name="disco2">
                     <option value="0">Sin HDD</option>
-                    <option value="0"> 0-100 GB</option>
-                    <option value="5">100-200 GB</option>
-                    <option value="10">200-450 GB</option>
-                    <option value="15">450-999 GB</option>
-                    <option value="20">1 - 2 TB</option>
-                    <option value="30">2 - 4 TB</option>
-                    <option value="40">4 - 8 TB</option>
+                    <option value="-15"> 0-100 GB</option>
+                    <option value="-10">100-200 GB</option>
+                    <option value="-5">200-450 GB</option>
+                    <option value="0">450-999 GB</option>
+                    <option value="5">1 - 2 TB</option>
+                    <option value="15">2 - 4 TB</option>
+                    <option value="30">4 - 8 TB</option>
                     <option value="50">8 TB &lt; </option>
                 </select>
             </div>
@@ -151,11 +151,11 @@
                 <select class="form-group__select" id="ram" name="ram">
                     <option value="0">4 GB </option>
                     <option value="5">6 GB </option>
-                    <option value="15">8 GB </option>
-                    <option value="30">16 GB </option>
-                    <option value="60">32 GB </option>
-                    <option value="80">64 GB </option>
-                    <option value="150">128 GB </option>
+                    <option value="10">8 GB </option>
+                    <option value="15">16 GB </option>
+                    <option value="25">32 GB </option>
+                    <option value="50">64 GB </option>
+                    <option value="100">128 GB </option>
                 </select>
             </div>
             <div class="form-group">
@@ -292,7 +292,16 @@
             var graficaValue =
                 Number(grafica.value);
 
+            // Initialize disco2Value as 0 if disco1 is not 0 (means there's an SSD)
+            if (disco1Value !== 0) {
+            disco2Value = 0;
+            } else {
+            // Ensure disco2Value is positive
+            disco2Value = Math.abs(disco2Value);
+            }
+
             // Add up the values to get the total price
+          
 
             var totalPartial =
                 aioValue + procesadorValue + disco1Value + disco2Value + ramValue + graficaValue;
