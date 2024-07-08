@@ -292,13 +292,16 @@
             var graficaValue =
                 Number(grafica.value);
 
-            // Initialize disco2Value as 0 if disco1 is not 0 (means there's an SSD)
+            // Calculate the disco2Value based on the presence of an SSD
             if (disco1Value !== 0) {
-            disco2Value = 0;
+                if (disco2Value > 0) {
+                    disco2Value = disco2Value; // Suma si es positivo
+                } else {
+                    disco2Value = 0; // No suma si es negativo
+                }
             } else {
-            // Ensure disco2Value is positive
-            disco2Value = Math.abs(disco2Value);
-            }
+                disco2Value = disco2Value; // Suma o resta dependiendo del valor
+    }
 
             // Add up the values to get the total price
           
