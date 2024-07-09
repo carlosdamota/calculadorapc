@@ -135,12 +135,12 @@
             <div class="form-group">
                 <label for="disco2">Disco HDD:</label>
                 <select class="form-group__select" id="disco2" name="disco2">
-                    <option value="-50">Sin HDD</option>
-                    <option value="-30"> 0-100 GB</option>
+                    <option value="-100">Sin HDD</option>
+                    <option value="-50"> 0-100 GB</option>
                     <option value="-20">100-200 GB</option>
                     <option value="-10">200-450 GB</option>
-                    <option value="0">450-999 GB</option>
-                    <option value="5">1 - 2 TB</option>
+                    <option value="5">450-999 GB</option>
+                    <option value="10">1 - 2 TB</option>
                     <option value="15">2 - 4 TB</option>
                     <option value="30">4 - 8 TB</option>
                     <option value="50">8 TB &lt; </option>
@@ -312,11 +312,11 @@
             var totalPrice =
                 totalPartial * generacionValue;
             
-            var resultNormal = totalPrice * 0.8;
+            var resultNormal = totalPrice * 0.7;
             
             var resultGaming = totalPrice * 1;
             
-            var resultEspecial = totalPrice * 1.3;
+            var resultEspecial = totalPrice * 1.2;
 
             // Display the total price in the result element
 
