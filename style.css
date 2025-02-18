@@ -1,182 +1,249 @@
 @font-face {
-    font-family: 'vagRounded';
-    src: url('/fonts/VAG\ Rounded\ Std\ Thin.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "vagRounded";
+  src: url("/fonts/VAG\ Rounded\ Std\ Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'vagRounded';
-    src: url('/fonts/VAG\ Rounded\ Std\ Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: "vagRounded";
+  src: url("/fonts/VAG\ Rounded\ Std\ Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 * {
-    text-decoration: none;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: vagRounded;
-    color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: vagRounded;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e200782c;
+}
+
+.card--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 43rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url(/image/ReciclajepcCashConverters.jpg);
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+  box-shadow: 5px 10px 28px -2px rgba(0, 0, 0, 0.82);
 }
 header {
-    padding: 0.5rem 0;
-    border-bottom: #E20077 solid 1px;
-    color: white;
-    background-color: #E20077;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  margin-bottom: 2rem auto;
+  color: #e20077;
+  font-size: 1.2em;
 }
 .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(/image/ReciclajepcCashConverters.jpg);
-    background-size: cover;
-
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: center;
-
+  padding: 0 1rem;
+  width: 100%;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .form {
-    margin-top: 3rem;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  margin: 0 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .form-group {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 1rem;
-    gap: 1;
-    background-color: transparent;
-    border: #E20077 2px solid;
-    padding: 0.5rem 0.5rem;
-    margin: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: #e20077 2px solid;
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 .form-group__select {
-    border: none;
-    background-color: transparent;
+  border: none;
+  background-color: transparent;
+  font-size: 0.8rem;
 }
 .form-group__select:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-option{
-    color: black;
+option {
+  color: black;
 }
 
 .form-button {
-    margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
-.button{
-    width: 300px;
-    border-radius: 1rem;
-    background-color: #E20077;
-    border: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-
+.button {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: #e20077;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  transition: 0.5s;
 }
 .button:hover {
-    background-color: #ba0163;
-    cursor: pointer;
-}
-
-.pc-precios {
-    display: flex;
-    gap: 1rem;
-    margin: 2rem 4rem;
-}
-.pc-precio {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-    width: 33%;
-    border-radius: 1rem;
-    border: #E20077 solid 2px;
-}
-.pc-precio__title {
-    color: #E20077;
-    margin: 0;
-    font-size: 1.5rem;
-    padding-bottom: 1rem;
-}
-.pc-precio__text {
-    margin-bottom: 0;
-    font-weight: 600;
-    margin-bottom: 1rem;
+  background-color: #e20078a6;
+  cursor: pointer;
 }
 
 .infografica {
-    color: darkgray;
-    font-size: 0.7rem;
+  color: darkgray;
+  font-size: 0.7rem;
+}
+.display-none {
+  display: none;
+}
+.consejos {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #e2007817;
+  border-radius: 1rem;
+  border: 1px solid #e200786e;
 }
 
-.consejos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 2rem;
-    width: 100%;
+.display-none {
+  display: none;
 }
 
 .consejos__article {
-    border: #E20077 1px solid;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    height: 12rem;
-    width: 45%;
+  /* border: #E20077 1px solid;
+    border-radius: 1rem; */
+  padding: 0.5rem;
+  width: 100%;
 }
 
 .consejos__article p {
-    font-size: 0.9rem;
-    line-height: 1.4rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
 }
 
 .consejos__title {
-    color: #E20077;
-    font-weight: 600;
-    margin: 0.5rem;
+  color: #e20077;
+  font-weight: 600;
+  margin: 0.5rem;
 }
 .consejos__subtitle {
-    color: #E20077;
-    font-weight: 600;
+  color: #e20077;
+  font-weight: 600;
 }
 
+.type-container {
+  width: 20rem;
+  height: 100%;
+  background-color: #e2007817;
+  border-radius: 1rem;
+  border: 1px solid #e200786e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.type-select {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #e20077;
+  width: 100%;
+  text-align: center;
+  padding: 0.3rem;
+  transition: 0.8s;
+  &:focus {
+    background-color: #e20078a6;
+  }
+  &:hover {
+    background-color: #e20078a6;
+  }
+  &.active {
+    background-color: #e2007862;
+  }
+}
+.type-description {
+  padding: 1em;
+}
+.total-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3em;
+}
 .footer {
-    width: 100vw;
-    display: flex;
-    /* position: fixed; */
-    bottom: 0px;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 1rem 0;
-    color: white;
-    background-color: #E20077;
-    margin-top: auto;
-   
+  width: 100%;
+  display: flex;
+  bottom: 0px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  color: #e20077;
+  font-size: 0.8rem;
 }
-@media (max-width: 768px) {
-    .consejos {
-        flex-direction: column;
-        margin-right: 5rem;
-        margin-left: 5rem;
-    }
+@media (max-width: 600px) {
+  .type-container {
+    height: auto;
+    width: 100%;
+  }
+  .card--container {
+    width: 100%;
+    border: none;
+    border-radius: none;
+    margin: auto;
+  }
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .consejos {
+    flex-direction: column;
+  }
 
-    .consejos__article {
-        width: 100%;
-    }
+  .consejos__article {
+    width: 100%;
+  }
+  .consejos__article p {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+  }
+  .button {
+    border-radius: 0.5rem;
+
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+  }
 }
-
-
-
