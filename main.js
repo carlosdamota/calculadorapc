@@ -48,8 +48,9 @@ const handleSubmit = (e) => {
     </div>
     <p class="type-description">Selecciona una opción.</p>
     <p class="total-price"></p>
+    <button class="reset-btn">Resetear</button>
     `;
-  priceSection.appendChild(results);
+  document.querySelector("main").appendChild(results);
   const normalPrice = results.querySelector(".normal");
   const gamingPrice = results.querySelector(".gaming");
   const ultraPrice = results.querySelector(".ultra");
@@ -81,5 +82,14 @@ const handleSubmit = (e) => {
     results.querySelector(".total-price").textContent =
       (valorTotal * 1.4).toFixed(2) + " €";
   });
+  const resetBtn = document.querySelector(".reset-btn");
+resetBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (document.querySelector(".type-container")) {
+    document.querySelector(".type-container").remove();
+  }
+  document.querySelector(".consejos").classList.remove("display-none");
+});
+
 };
 form.addEventListener("submit", handleSubmit);
